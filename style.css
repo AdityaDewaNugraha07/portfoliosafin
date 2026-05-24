@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
+/* =========================================
+   1. GLOBAL STYLES
+   ========================================= */
 * {
   padding: 0;
   margin: 0;
@@ -8,10 +11,9 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Biar scrollnya mulus saat menu diklik */
+  scroll-behavior: smooth;
 }
 
-/* PERBAIKAN: overflow: hidden dihapus agar web bisa di-scroll ke bawah */
 body {
   width: 100%;
   min-height: 100vh;
@@ -19,10 +21,40 @@ body {
   color: black;
 }
 
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12vh 10% 50px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alt-bg {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.section-title h2 span {
+  color: rgb(109, 67, 0);
+}
+
+/* =========================================
+   2. NAVBAR SECTION
+   ========================================= */
 nav {
   width: 100%;
   height: 10vh;
-  position: fixed; /* Diubah jadi fixed biar nav selalu ikut saat di scroll */
+  position: fixed;
   top: 0;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
@@ -45,18 +77,7 @@ nav {
 
 .logo span {
   color: rgb(109, 67, 0);
-  text-shadow: 0 0 10px rgba(109, 67, 0, 0.3); /* Shadow diperhalus sedikit */
-}
-
-.hamburg,
-.cancel {
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: black;
-  font-size: 1.8rem;
-  display: none;
+  text-shadow: 0 0 10px rgba(109, 67, 0, 0.3);
 }
 
 .nav-container .links {
@@ -89,6 +110,10 @@ nav {
   width: 100%;
 }
 
+.nav-container .links a:hover {
+  color: rgb(109, 67, 0);
+}
+
 .nav-container .contact-btn {
   background-color: transparent;
   padding: 5px 20px;
@@ -108,10 +133,6 @@ nav {
 
 .nav-container .contact-btn:hover a {
   color: white;
-}
-
-.nav-container .links a:hover {
-  color: rgb(109, 67, 0);
 }
 
 .dropdown {
@@ -146,89 +167,24 @@ nav {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.hamburg,
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: black;
+  font-size: 1.8rem;
+  display: none;
+}
+
 .cancel {
   color: white;
 }
 
-/* GLOBAL SECTION STYLES */
-section {
-  width: 100%;
-  min-height: 100vh;
-  padding: 12vh 10% 50px 10%; /* Memberi jarak agar tidak tertutup navbar */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.alt-bg {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.3
-  ); /* Memberi sedikit beda warna antar halaman */
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section-title h2 {
-  font-size: 2.5rem;
-  color: black;
-}
-
-.section-title h2 span {
-  color: rgb(109, 67, 0);
-}
-
-/* HOME SECTION */
-
 /* =========================================
-   STATUS BADGE - TEMA GLASS OUTLINE (MEWAH & MINIMALIS)
+   3. HOME SECTION
    ========================================= */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.3); /* Transparan seperti kaca */
-  backdrop-filter: blur(8px); /* Efek buram pada latar belakang */
-  border: 1px solid rgb(109, 67, 0); /* Garis outline luar */
-  padding: 5px 15px;
-  border-radius: 30px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background-color: rgb(109, 67, 0);
-  border-radius: 50%;
-  /* 🔥 INI DIA ANIMASINYA 🔥 */
-  animation: glass-pulse 2s infinite;
-}
-
-.status-text {
-  font-size: 0.8rem;
-  color: rgb(109, 67, 0);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Animasi titik memancarkan cahaya (Glow Pulse) yang elegan */
-@keyframes glass-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(109, 67, 0, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(109, 67, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(109, 67, 0, 0);
-  }
-}
-
 #home .main-container {
   width: 100%;
   height: 100%;
@@ -251,24 +207,70 @@ section {
 .main-container .image img {
   width: 100%;
   max-width: 400px;
-  border-radius: 50%; /* Membuat foto jadi bundar */
+  border-radius: 50%;
   border: 5px solid rgb(109, 67, 0);
   box-shadow: 0 0 20px rgba(109, 67, 0, 0.4);
 }
 
-.content h1 {
-  font-size: clamp(2rem, 3vw, 4rem);
+/* Judul & Badge Sejajar */
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
 }
 
-.content h1 span {
+.title-wrapper h1 {
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.title-wrapper h1 span {
   color: rgb(109, 67, 0);
 }
 
-/* STYLE BARU UNTUK TYPEWRITER JAVASCRIPT */
+/* Status Badge - Glass Outline */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(109, 67, 0);
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(109, 67, 0);
+  border-radius: 50%;
+  animation: glass-pulse 2s infinite;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  color: rgb(109, 67, 0);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes glass-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(109, 67, 0, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(109, 67, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(109, 67, 0, 0); }
+}
+
+/* Typewriter */
 .typewriter-container {
   font-weight: 600;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  margin: 10px 0;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .typewriter-text {
@@ -281,13 +283,8 @@ section {
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .content p {
@@ -297,13 +294,13 @@ section {
   color: #444;
 }
 
+/* Social Media & Button */
 .social-links {
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
 }
 
-/* Menghilangkan garis bawah biru bawaan browser pada link */
 .social-links a {
   text-decoration: none;
 }
@@ -347,37 +344,8 @@ section {
 }
 
 /* =========================================
-   PENGATURAN SEJAJAR NAMA & BADGE
+   4. ABOUT SECTION
    ========================================= */
-.title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  /* 🔥 KUNCI UTAMANYA DI SINI: Paksa selalu 1 baris, dilarang turun! */
-  flex-wrap: nowrap;
-  margin-bottom: 5px;
-}
-
-.title-wrapper h1 {
-  /* 🔥 Diperkecil sedikit lagi agar muat berdampingan dengan badge */
-  font-size: clamp(1.4rem, 2vw, 2.2rem);
-  margin: 0;
-
-  /* 🔥 Paksa teks nama memanjang, tidak boleh terpotong ke bawah */
-  white-space: nowrap;
-}
-
-.typewriter-container {
-  font-size: clamp(
-    1.3rem,
-    2vw,
-    1.8rem
-  ); /* Ukuran typewriter disesuaikan agar seimbang dengan nama */
-  margin-bottom: 15px;
-}
-
-/* ABOUT SECTION */
 .about-container {
   max-width: 800px;
   margin: 0 auto;
@@ -388,11 +356,13 @@ section {
 
 .about-container p {
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
 /* =========================================
-   MINIMALIST EDUCATION TIMELINE
+   5. EDUCATION SECTION
    ========================================= */
 .edu-timeline-container {
   max-width: 600px;
@@ -475,7 +445,9 @@ section {
   color: rgb(109, 67, 0);
 }
 
-/* SKILLS SECTION */
+/* =========================================
+   6. SKILLS SECTION
+   ========================================= */
 .skills-container {
   display: flex;
   justify-content: center;
@@ -491,12 +463,10 @@ section {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   border-top: 4px solid rgb(109, 67, 0);
   height: 100%;
-  /* Kunci kemulusannya ada di sini */
   transition: all 0.3s ease;
 }
 
 .skill-box:hover {
-  /* Hapus kata !important, sekarang sudah gak perlu lagi */
   transform: translateX(5px);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 5px 15px rgba(109, 67, 0, 0.1);
@@ -530,159 +500,24 @@ section {
 }
 
 /* =========================================
-   MINIMALIST EXPERIENCE TIMELINE
+   7. EXPERIENCE SECTION (TWO COLUMNS)
    ========================================= */
-.exp-timeline-container {
-  max-width: 600px; /* Lebar minimalis sama seperti education */
-  margin: 0 auto;
-  border-left: 2px solid rgb(109, 67, 0); /* Garis lurus vertikal */
-  padding-left: 30px;
-  position: relative;
-}
-
-.exp-timeline-item {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.exp-timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-/* Titik poin kecil yang menusuk pas di garis timeline */
-.exp-dot {
-  position: absolute;
-  left: -37px; /* Digeser presisi ke tengah garis vertikal */
-  top: 0;
-  width: 12px;
-  height: 12px;
-  background-color: rgb(109, 67, 0);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 5px rgba(109, 67, 0, 0.5);
-}
-
-/* Kotak penanda durasi/tahun berbentuk pil ramping */
-.exp-date {
-  display: inline-block;
-  background-color: rgba(109, 67, 0, 0.1);
-  color: rgb(109, 67, 0);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  border: 1px solid rgba(109, 67, 0, 0.3);
-
-  /* 🔥 TAMBAHKAN KODE INI 🔥 */
-  align-self: flex-start;
-}
-
-/* Kotak isi konten pengalaman kerja */
-.exp-content {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  border-top: 2px solid #ffffff; /* Garis aksen putih tipis layaknya My Skills */
-  transition: all 0.3s ease;
-}
-
-.exp-content:hover {
-  transform: translateX(5px); /* Efek geser kanan halus saat di-hover */
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 5px 15px rgba(109, 67, 0, 0.1);
-}
-
-.exp-content h3 {
-  font-size: 1.2rem;
-  color: black;
-  margin-bottom: 5px;
-}
-
-.exp-content h4 {
-  font-size: 0.95rem;
-  color: rgb(109, 67, 0);
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.exp-content p {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* CONTACT SECTION */
-.contact-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  border-top: 4px solid rgb(109, 67, 0);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-info .contact-desc {
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Mengatur kotak pembungkus kontak agar posisinya di tengah tapi isinya rata kiri */
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Membuat teks sejajar rata kiri */
-  width: fit-content;
-  margin: 0 auto; /* Memastikan blok ini berada tepat di tengah */
-  gap: 15px;
-}
-
-.contact-list p {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.1rem;
-  margin: 0;
-  color: #333;
-}
-
-/* Memberikan lebar pasti pada ikon agar baris teks di kanannya sejajar lurus */
-.contact-list i {
-  color: rgb(109, 67, 0);
-  font-size: 1.5rem;
-  width: 30px; /* Lebar ikon dikunci */
-  text-align: center;
-}
-
-/* =========================================
-   MINIMALIST EXPERIENCE TIMELINE (TWO COLUMNS)
-   ========================================= */
-/* Wadah pembungkus agar kolom membagi area kanan-kiri */
-
 .exp-wrapper {
   display: flex;
   justify-content: center;
-  gap: 4rem; /* Jarak antar kolom kanan dan kiri */
-  max-width: 1100px; /* Diperlebar agar muat dua kolom bersandingan */
+  gap: 4rem;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
 }
 
-/* Mengatur masing-masing kolom agar seimbang panjangnya */
 .exp-column {
   flex: 1;
   min-width: 300px;
-
-  /* 🔥 TAMBAHAN: Jadikan kolom lentur ke bawah */
   display: flex;
   flex-direction: column;
 }
 
-/* Judul Sub-Kolom (Work & Organizational) */
 .column-subtitle {
   font-size: 1.4rem;
   color: black;
@@ -696,14 +531,11 @@ section {
   color: rgb(109, 67, 0);
 }
 
-/* Wadah Timeline yang sudah disesuaikan ukurannya */
 .exp-timeline-container {
   border-left: 2px solid rgb(109, 67, 0);
   padding-left: 30px;
   position: relative;
   width: 100%;
-
-  /* 🔥 TAMBAHAN: Memaksa wadah mengambil seluruh sisa tinggi kolom */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -712,8 +544,6 @@ section {
 .exp-timeline-item {
   position: relative;
   margin-bottom: 30px;
-
-  /* 🔥 TAMBAHAN: Memaksa setiap item membagi tinggi secara rata */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -745,6 +575,7 @@ section {
   font-weight: 600;
   margin-bottom: 10px;
   border: 1px solid rgba(109, 67, 0, 0.3);
+  align-self: flex-start;
 }
 
 .exp-content {
@@ -754,8 +585,6 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   border-top: 2px solid #ffffff;
   transition: all 0.3s ease;
-
-  /* 🔥 TAMBAHAN: Kunci utamanya di sini! Memaksa kartu meregang penuh */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -787,98 +616,104 @@ section {
 }
 
 /* =========================================
-   PENGATURAN RESPONSIVE HP (100% Nengah & Rapi)
+   8. CONTACT SECTION
    ========================================= */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  border-top: 4px solid rgb(109, 67, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
 
-/* 1. MENGUNCI LAYAR AGAR TIDAK BOCOR KE KANAN/KIRI */
+.contact-info .contact-desc {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
 
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 25px auto 0 auto;
+}
+
+.contact-list p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.contact-list p i {
+  width: auto !important;
+  text-align: center !important;
+  color: inherit;
+}
+
+.contact-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(109, 67, 0);
+  border-radius: 50%;
+  color: rgb(109, 67, 0);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-circle i {
+  font-size: 1.3rem;
+  width: auto;
+  color: inherit;
+}
+
+.contact-circle:hover {
+  background-color: rgb(109, 67, 0);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(109, 67, 0, 0.2);
+}
+
+.contact-circle:hover i {
+  color: #ffffff !important;
+}
+
+
+/* =========================================
+   9. RESPONSIVE MOBILE (Max-Width 768px)
+   ========================================= */
 html,
 body {
   overflow-x: hidden !important;
   max-width: 100%;
 }
 
-/* 2. PENYESUAIAN LAYAR HP (Maksimal Lebar 768px) */
 @media (max-width: 768px) {
-
-  .title-wrapper {
-    justify-content: center;
-    flex-wrap: wrap !important; /* Di HP boleh turun ke bawah biar gak nabrak layar */
+  /* Navbar */
+  .nav-container .links {
+    display: none;
   }
-  
-  .title-wrapper h1 {
-    white-space: normal !important; /* Di HP teks nama boleh menyesuaikan layar */
+  .hamburg,
+  .cancel {
+    display: block;
   }
 
-  /* Jarak Kanan-Kiri Section Dibuat Lebih Pas */
+  /* Global Section Layout */
   section {
     padding: 12vh 5% 50px 5%;
   }
-
-  .status-badge {
-    margin: 15px auto !important; /* Paksa nengah di HP */
-  }
-  .main-container .content {
-    text-align: center !important; /* Paksa teks nengah di HP */
-    width: 100% !important;
-  }
-
-  /* Tampilan Halaman Depan (Home) Nengah Sempurna */
-  #home .main-container {
-    flex-direction: column !important; /* 🔥 Mengembalikan foto ke paling atas */
-    text-align: center;
-    justify-content: center;
-    margin-top: 4rem;
-  }
-
-  .main-container .content {
-    width: 100% !important;
-  }
-
-  .content p {
-    width: 95%; /* Lebar dipaskan dengan layar */
-    margin: 20px auto;
-    text-align: justify; /* Teks rata kanan-kiri layaknya About Me */
-  }
-
-  .status-badge {
-    margin: 15px auto;
-  }
-
-  .main-container .image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Mencegah SVG Blob / Foto Jebol Keluar Layar */
-  .main-container .image svg,
-  .main-container .image img {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-  }
-
-  /* Menengahkan Efek Ngetik (Typewriter) */
-  .typewriter-container {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Menengahkan Tombol Sosmed & Tombol CV */
-  .social-links {
-    justify-content: center;
-  }
-
-  .content .btn {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  /* Memastikan Kotak-Kotak (Skills, About, Timeline) Tidak Keluar Jalur */
   .skill-box,
   .contact-container,
   .edu-timeline-container,
@@ -887,25 +722,82 @@ body {
     max-width: 100%;
   }
 
-  /* Merapikan Kotak Kontak Agar Nengah di Layar HP */
-  .contact-list {
-    align-items: flex-start;
-    padding-left: 10%; /* Memberikan jarak kiri agar ikon rata, tapi keseluruhan blok tetap nengah */
+  /* Home Section */
+  #home .main-container {
+    flex-direction: column !important;
+    text-align: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  
+  .main-container .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .main-container .image svg,
+  .main-container .image img {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+  
+  .title-wrapper {
+    justify-content: center;
+    flex-wrap: wrap !important;
+  }
+  .title-wrapper h1 {
+    white-space: normal !important;
+  }
+  
+  .status-badge {
+    margin: 15px auto !important;
+  }
+  
+  .typewriter-container {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 
-  /* Mengaktifkan Tombol Menu Hamburg */
-  .nav-container .links {
-    display: none;
+  .main-container .content {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .content p {
+    width: 95%;
+    margin: 20px auto;
+    text-align: justify;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .content .btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
-  .hamburg,
-  .cancel {
-    display: block;
+  /* About Section */
+  .about-container p {
+    width: 95%;
+    margin: 0 auto 20px auto;
+    text-align: justify;
   }
 
-  /* Membuat kolom menumpuk ke bawah secara rapi khusus di layar HP */
+  /* Experience Section */
   .exp-wrapper {
     flex-direction: column;
     gap: 3rem;
+  }
+
+  /* Contact Section */
+  .contact-info .contact-desc {
+    text-align: justify;
+  }
+  .contact-list {
+    margin: 25px 0 0 0;
+    width: 100%;
   }
 }
