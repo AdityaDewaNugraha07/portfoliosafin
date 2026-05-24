@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Safin Nurhaliza - Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span><i>Lizafin.</i></span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a
+                        href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a
+                        href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250"><a
+                        href="#education">Education</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a
+                        href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a
+                        href="#experience">Experience</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a
+                        href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home" onclick="cancel()">Home</a>
+                <a href="#about" onclick="cancel()">About</a>
+                <a href="#education" onclick="cancel()">Education</a>
+                <a href="#skills" onclick="cancel()">Skills</a>
+                <a href="#experience" onclick="cancel()">Experience</a>
+                <a href="#contact" onclick="cancel()">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                            fill="white" />
+                    </mask>
+
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                            fill="rgb(109, 67, 0)" />
+
+                        <image class="home__blob-img" x="10" y="20" width="480" height="480"
+                            preserveAspectRatio="xMidYMid slice" href="main.png" />
+                    </g>
+
+                </svg>
+            </div>
+            <div class="content">
+                <div class="title-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+                    <h1>Hey I'm <span>Safin Nurhaliza</span></h1>
+                    
+                    <div class="status-badge">
+                        <div class="status-dot"></div>
+                        <div class="status-text">Available for Hire</div>
+                    </div>
+                </div>
+
+                <div class="typewriter-container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                    I'm a&nbsp;<span class="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <p style="text-align: justify;" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    Lulusan baru S1 Manajemen dari
+                    Universitas Semarang yang memiliki ketertarikan kuat pada bidang pelayanan. Memiliki kemampuan
+                    komunikasi yang baik dan terbiasa bekerja secara efektif dalam tim maupun individu.
+                </p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="mailto:safinnurhaliza@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/safin-nurhaliza" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/6287828425647?text=Halo%20Safin,%20saya%20ingin%20berkenalan%20dan%20mengobrol%20dengan%20anda"
+                        target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i
+                            class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/smileraldo_o/" target="_blank" data-aos="fade-up"
+                        data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <a href="https://res.cloudinary.com/dah3zs4sd/image/upload/v1779035486/CV_Safin_Nurhaliza_z0ymfe.pdf"
+                    target="_blank" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Download CV</button>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="alt-bg">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2>About <span>Me</span></h2>
+        </div>
+        <div class="about-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <p style="text-align: justify;">
+                Halo! Saya Safin Nurhaliza, seorang lulusan <strong>S1 Manajemen dari Universitas Semarang dengan IPK
+                    3.75</strong>. Saya memiliki passion besar di dunia pelayanan, khususnya sebagai <em>Customer
+                    Service</em>. Selama masa kuliah, saya aktif dalam berbagai kegiatan riset dan organisasi yang
+                asah kemampuan komunikasi, empati, dan problem-solving saya.
+            </p>
+            <p style="text-align: justify;">Dengan pengalaman kerja dan organisasi yang saya miliki, saya selalu
+                antusias untuk belajar hal baru,
+                beradaptasi dengan cepat, dan memberikan pelayanan terbaik untuk kepuasan pelanggan maupun kemajuan
+                perusahaan.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Education <span>History</span></h2>
+        </div>
+        <div class="edu-timeline-container">
+
+            <div class="edu-timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="edu-dot"></div>
+                <div class="edu-date">2021 - 2025</div>
+                <div class="edu-content">
+                    <h3>Universitas Semarang</h3>
+                    <h4>S1 Manajemen (IPK 3.75 / 4.00)</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Semarang, Jawa Tengah</p>
+                </div>
+            </div>
+
+            <div class="edu-timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="edu-dot"></div>
+                <div class="edu-date">2018 - 2021</div>
+                <div class="edu-content">
+                    <h3>SMA Negeri 2 Demak</h3>
+                    <h4>Jurusan Ilmu Pengetahuan Sosial (IPS)</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Demak, Jawa Tengah</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2>My <span>Skills</span></h2>
+        </div>
+        <div class="skills-container">
+
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-laptop"></i> Hard Skills</h3>
+                    <ul>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft Power Point</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-users"></i> Soft Skills</h3>
+                    <ul>
+                        <li>Komunikatif</li>
+                        <li>Asertif & Empatik</li>
+                        <li>Analisis & Berpikir Kritis</li>
+                        <li>Kerja Sama Tim</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="alt-bg">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2>My <span>Experiences</span></h2>
+        </div>
+
+        <div class="exp-wrapper">
+
+            <div class="exp-column">
+                <h3 class="column-subtitle" data-aos="fade-up" data-aos-duration="1000"><i
+                        class="fa-solid fa-briefcase"></i> Work Experience</h3>
+                <div class="exp-timeline-container">
+
+                    <div class="exp-timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="exp-dot"></div>
+                        <div class="exp-date">3 Bulan</div>
+                        <div class="exp-content">
+                            <h3>Pramuniaga</h3>
+                            <h4>Toko Emas</h4>
+                            <p>Melayani pelanggan dengan ramah, memberikan informasi produk perhiasan, dan menjaga
+                                kerapian serta keamanan stok barang di toko.</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="exp-dot"></div>
+                        <div class="exp-date">1 Bulan</div>
+                        <div class="exp-content">
+                            <h3>Barista / Waitress</h3>
+                            <h4>Coffeeshop</h4>
+                            <p>Menerima pesanan, menyajikan minuman dan makanan, serta memastikan kenyamanan area
+                                pelanggan dengan standar pelayanan prima.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="exp-column">
+                <h3 class="column-subtitle" data-aos="fade-up" data-aos-duration="1000"><i
+                        class="fa-solid fa-users"></i> Organizational & Projects</h3>
+                <div class="exp-timeline-container">
+
+                    <div class="exp-timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="exp-dot"></div>
+                        <div class="exp-date">2024</div>
+                        <div class="exp-content">
+                            <h3>Moderator & Koordinator Tim</h3>
+                            <h4>Himpunan Mahasiswa Jurusan Manajemen (HMJM)</h4>
+                            <p>Memberikan pelayanan informasi yang ramah, solutif, dan komunikatif kepada mahasiswa
+                                terkait kegiatan kemahasiswaan.</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="exp-dot"></div>
+                        <div class="exp-date">2023</div>
+                        <div class="exp-content">
+                            <h3>Asisten Peneliti (Perluasan UMKM)</h3>
+                            <h4>Universitas Semarang</h4>
+                            <p>Mengedukasi para pelaku UMKM secara asertif mengenai penerapan inovasi baru untuk
+                                memperluas peluang usaha dan meningkatkan daya saing.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Contact <span>Me</span></h2>
+        </div>
+        <div class="contact-container" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p class="contact-desc">Silakan hubungi saya untuk peluang karir atau diskusi profesional melalui kontak
+                    di bawah ini:</p>
+
+                <div class="contact-list">
+                    <p><i class="fa-solid fa-phone"></i> 0878-2842-5647</p>
+                    <p><i class="fa-solid fa-envelope"></i> safinnurhaliza@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Demak, Jawa Tengah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
